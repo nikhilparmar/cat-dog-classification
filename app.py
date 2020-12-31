@@ -33,6 +33,8 @@ def predict(fullpath):
     data = data.astype('float') / 255
 
     # Prediction
+    
+    global graph
 
     with graph.as_default():
         result = model.predict(data)
